@@ -16,23 +16,24 @@
 // }
 // console.log(positive);
 // Q3 palindrome series by above 4 methods
-let arr=[1,2,1]
-let arr2=[]
-let reverse=[]
-// push given array elements into arr2 array
-for(let i=0;i<arr.length;i++){
-    arr2.push(arr[i])
-}
-// reverse the given array
-while(arr.length>0){
-    reverse.push(arr.pop())
+function palindrome() {
+    let arr = [1, 2, 3, 2, 1]
+    let original = []
+    let reverse = []
 
-}
-for(let i=0;i<arr2.length;i++){
-    if(original[i !== reverse[i]]){
-        return("not a palindrome");
-
+    //push given array elements into original array
+    for (let i = 0; i < arr.length; i++) {
+        original.push(arr[i])
     }
+    //reverse the given array
+    while (arr.length > 0) {
+        reverse.push(arr.pop())
+    }
+    for (let i = 0; i < original.length; i++) {
+        if (original[i] !== reverse[i]) {
+            return "not a palindrome";
+        }
+    }
+    return "palindrome";
 }
-return(palindrome);
-
+console.log(palindrome())
